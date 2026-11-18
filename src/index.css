@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #FEF9E3;
+    color: #3D2612;
+  }
+
+  body {
+    background-color: #FEF9E3;
+    color: #3D2612;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-handwritten {
+    font-family: "Shantell Sans", "Plus Jakarta Sans", cursive, sans-serif;
+  }
+
+  .font-rounded {
+    font-family: "Fredoka", "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes stageBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(-24px);
+  }
+  100% {
+    transform: translateX(36px);
+  }
+}
+
+@keyframes sunbeamShimmer {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.62;
+    transform: scaleY(1.03);
+  }
+}
+
+@keyframes fireflyFloat {
+  0%, 100% {
+    opacity: 0.28;
+    transform: translate3d(0px, 0px, 0) scale(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate3d(10px, -16px, 0) scale(1.18);
+  }
+}
+
+@keyframes butterflyGlide {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) rotate(-4deg);
+  }
+  33% {
+    transform: translate3d(18px, -14px, 0) rotate(5deg);
+  }
+  66% {
+    transform: translate3d(32px, -4px, 0) rotate(-3deg);
+  }
+}
+
+@keyframes wingFlap {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.35);
+  }
+}
+
+@keyframes leafDrift {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -18px, 0) rotate(0deg);
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(28px, 140px, 0) rotate(140deg);
+  }
+}
+
+@keyframes flowerSway {
+  0%, 100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes kancilGreeting {
+  0%, 100% {
+    transform: translateY(0px) scaleY(1) scaleX(1) rotate(0deg);
+  }
+  28% {
+    transform: translateY(-6px) scaleY(1.018) scaleX(0.992) rotate(1.4deg);
+  }
+  58% {
+    transform: translateY(-2px) scaleY(1.006) scaleX(0.997) rotate(-1.2deg);
+  }
+  82% {
+    transform: translateY(-4px) scaleY(1.012) scaleX(0.995) rotate(0.8deg);
+  }
+}
+
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes ctaPulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 12px 28px rgba(13, 148, 136, 0.38);
+  }
+  50% {
+    transform: scale(1.022);
+    box-shadow: 0 16px 34px rgba(16, 185, 129, 0.52);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: starTwinkle 3.2s ease-in-out infinite;
+}
+
+.animate-stage-burst {
+  animation: stageBurst 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-cloud-drift {
+  animation: cloudDrift 26s ease-in-out infinite alternate;
+}
+
+.animate-sunbeam {
+  animation: sunbeamShimmer 6.5s ease-in-out infinite;
+}
+
+.animate-firefly {
+  animation: fireflyFloat 5.4s ease-in-out infinite;
+}
+
+.animate-butterfly {
+  animation: butterflyGlide 9s ease-in-out infinite;
+}
+
+.animate-wing-flap {
+  animation: wingFlap 0.38s ease-in-out infinite;
+}
+
+.animate-leaf-drift {
+  animation: leafDrift 11s linear infinite;
+}
+
+.animate-flower-sway {
+  animation: flowerSway 4.2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-kancil-greeting {
+  animation: kancilGreeting 3.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-bubble-float {
+  animation: bubbleFloat 4.6s ease-in-out infinite;
+}
+
+.animate-cta-pulse {
+  animation: ctaPulseSlow 3.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-twinkle,
+  .animate-stage-burst,
+  .animate-cloud-drift,
+  .animate-sunbeam,
+  .animate-firefly,
+  .animate-butterfly,
+  .animate-wing-flap,
+  .animate-leaf-drift,
+  .animate-flower-sway,
+  .animate-kancil-greeting,
+  .animate-bubble-float,
+  .animate-cta-pulse {
+    animation: none !important;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #3d2612 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-certificate {
+    box-shadow: none !important;
+    border: 4px double #b45309 !important;
+    background: #fffbeb !important;
+    color: #3d2612 !important;
+    page-break-inside: avoid;
+  }
+}
+
+.forest-readable-text {
+  text-shadow:
+    0 1px 0 rgba(255, 253, 245, 0.96),
+    0 -1px 0 rgba(255, 253, 245, 0.92),
+    1px 0 0 rgba(255, 253, 245, 0.92),
+    -1px 0 0 rgba(255, 253, 245, 0.92),
+    0 2px 14px rgba(255, 253, 245, 0.94);
+}
+

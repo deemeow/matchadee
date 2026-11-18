@@ -1,0 +1,6 @@
+{
+  "name": "KARYA SASTERA HIDUP!",
+  "description": "Aplikasi permainan pendidikan Bahasa Melayu Tahun 5 bertemakan teater fantasi: Baca, Hayati, Persembahkan!",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": []
+}
